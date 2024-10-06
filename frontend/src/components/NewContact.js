@@ -29,13 +29,17 @@ function NewContact(props) {
 
 
 	return (
-        <form className='new-contact' onSubmit={createContact}>
-           <select value={category} onChange={(e) => setCategory(e.target.value)}>
-	<option value="Customer">Customer</option>
-	<option value="Employee">Employee</option>
-	<option value="Supplier">Supplier</option>
-	<option value="Other">Other</option>
-	</select>
+      <form onSubmit={handleAddContact}>
+      {/* Replacing the input field with a dropdown */}
+      <label>Phone Type:</label>
+      <select value={contactType} onChange={(e) => setContactType(e.target.value)}>
+        <option value="">Select Phone Type</option>
+        <option value="Home">Home</option>
+        <option value="Work">Work</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Other">Other</option>
+      </select>
+
 
             <button className='button green' type='submit'>Create Contact</button>
         </form>
