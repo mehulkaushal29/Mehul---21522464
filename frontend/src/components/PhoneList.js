@@ -11,8 +11,8 @@ function PhoneList(props) {
             <table onClick={(e) => e.stopPropagation()}>
                 <thead>
                     <tr>
-                        <th>Phone Type</th>
-                        <th>Phone Number</th>
+                        <th>Name</th>
+                        <th>Number</th>
                         <th></th>
                     </tr>
                 </thead>
