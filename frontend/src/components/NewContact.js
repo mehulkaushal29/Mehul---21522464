@@ -25,22 +25,10 @@ function NewContact(props) {
 
         setName('');
     }
-	const [category, setCategory] = useState('Customer'); // The default value is "Customer"
-
 
 	return (
-      <form onSubmit={handleAddContact}>
-      {/* Replacing the input field with a dropdown */}
-      <label>Phone Type:</label>
-      <select value={contactType} onChange={(e) => setContactType(e.target.value)}>
-        <option value="">Select Phone Type</option>
-        <option value="Home">Home</option>
-        <option value="Work">Work</option>
-        <option value="Mobile">Mobile</option>
-        <option value="Other">Other</option>
-      </select>
-
-
+        <form className='new-contact' onSubmit={createContact}>
+            <input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}/>
             <button className='button green' type='submit'>Create Contact</button>
         </form>
 	);
